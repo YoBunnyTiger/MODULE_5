@@ -77,7 +77,7 @@ class UrTube:
             return None
         for video in self.videos:
             if video.title is title:
-                if video.adult_mode and self.current_user.age < 18:
+                if video.adult_mode is True and self.current_user.age < 18:
                     print('Вам нет 18 лет, пожалуйста покиньте страницу')
                     return self
                 while video.duration > video.time_now:
